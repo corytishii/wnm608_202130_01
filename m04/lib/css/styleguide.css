@@ -462,7 +462,7 @@ figure {
 	box-sizing: content-box;
 	cursor: pointer;
 }
-.hidden+toggel::after {
+.hidden+.toggle::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -510,20 +510,20 @@ figure {
 .table td,
 .table th {
 	padding: 0.5em 1em;
-	text-align: left;
+	text-align: center;
 }
 
 .table.striped tbody tr:nth-child(odd) {
 	background-color: rgba(0,0,0,0.05);
 }
 
-.table.line.all tbody tr,
-.table.line.horizontal tbody tr {
+.table.lined.all tbody tr,
+.table.lined.horizontal tbody tr {
 	border-top: 1px solid rgba(0,0,0,0.15);
 }
 
-.table.line.all th:not(:first-child),
-.table.line.all td:not(:first-child),
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
 .table.lined.vertical th:not(:first-child),
 .table.lined.vertical td:not(:first-child) {
 	border-left: 1px solid rgba(0,0,0,0.15);
