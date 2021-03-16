@@ -19,16 +19,21 @@
 body {
 	margin: 0;
 	font-size: 100%;
-	font-family: Europa, "Freight Pro", Span, serif;
+	font-family: Futura, "Freight Pro", Span, serif;
 }
 
-h1,
-h2,
+h1 {
+	font-family: Futura;
+}
+h2{
+	font-family: Soleil, Helvetica, Arial;
+
+}
 h3, 
 h4,
 h5,
 h6, {
-	font-family: Laca, Niveau Grotesk, Soleil, sans-serif;
+	font-family: Open Sans, Arial, Soleil, sans-serif;
 }
 
 a {
