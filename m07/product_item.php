@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ear Audio Store Single Item</title>
 	<?include "parts/meta.php" ?>
 </head>

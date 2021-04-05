@@ -2,7 +2,7 @@
 
 :root{
     --color-body:#111;
-    --color-main:##97c6c4;
+    --color-main:#97c6c4;
     --color-main-dark:#1c1c6f;
     --color-main-light:#9292f3;
 }
@@ -16,7 +16,7 @@ a{
 	color:var(--color-main);
 }
 
-/*new_m03*/
+
 .hero{
 	margin: 0;
 }
@@ -31,7 +31,7 @@ a{
 	width: 1em;
 }
 
-/*new_m03*/
+
 @media (max-width: 450px){
 	.navbar h1{
 		white-space: nowrap;
