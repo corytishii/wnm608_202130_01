@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ear Audio Store Single Item</title>
-	<? include "parts/meta.php" ?>
+	<?include "parts/meta.php" ?>
 </head>
 <body>
-	<? include "parts/navbar.php" ?>
+	<?include "parts/navbar.php" ?>
 
 	<div class="container pad push-down">
 		<nav class="nav-crumbs">

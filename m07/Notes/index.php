@@ -20,7 +20,7 @@ $alpha = 5;
 
 echo $alpha;
 
-// string interpolation
+// string interpolation (a variable occuring in a string, this can update) (useful for a template) (a different string that can have several variables)
 
 echo '<div>I have $alpha items for sale</div>';
 echo "<div>I have $alpha items for sale</div>";
@@ -71,14 +71,14 @@ echo "<div>My name is {$_GET['name']}</div>"; //type "?name=Cory" on the browser
 
 echo "<div>My name is {$_GET['name']}. I like {$_GET['like']} </div>"; //type "&like=chocolate berries" in browser link (url string) & the page should say "My name is Cory I like chocolate berries" NEVER use "{$_GET['name']}" for any personal information. Use this ONLY for simple variables.
 
-echo "<div>My name is {$_POST['name']}</div>"; //uses "system variable", a hidden array that's used to pass information from Point A to Point B
+echo "<div>My name is {$_POST['name']}</div>"; //uses "system variable", a hidden array that's used to pass information from Point A to Point B (system variable) (do mathmatics in php, do calculations with dimmensions with pixels)
 
 //usually doesn't use "{$_GET['name']}", rather uses "{$_POST['name']}"
 
 ?>
 <hr>
 <?
-// arrays
+// arrays (mainly in php & to) (index & the position) (index by the numbers 0, 1, 2) (index is always 1 less than the position)
 $colors = array("red","green","blue"); //arrays start counting at "0"; going "0", "1","2"
 
 echo $colors[1];
