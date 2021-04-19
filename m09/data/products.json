@@ -1,0 +1,23 @@
+{
+	"products":[
+	{
+		"product_name":"Sony WF-1000XM3 True Wireless Earbuds",
+		"product_description":"These are compact wireless noise cancelling earbuds",
+		"technical_specs":["frequency response 20-20000Hz","weight 70g"],
+		"price":"199.71"
+	},
+	{
+		"product_name":"Apple AirPods Pro",
+		"product_description":"These are perfect for Apple Fans",
+		"technical_specs":["frequency response 20-20000Hz","weight 5.4g"],
+		"price":"219"
+	},
+	{
+		"product_name":"Cambridge Audio Melomania 1",
+		"product_description":"These are compact wireless earbuds with mind blowing sound",
+		"technical_specs":["frequency response 20-20000Hz","weight 9.2g"],
+		"price":"135.23"
+	}
+
+]
+}
