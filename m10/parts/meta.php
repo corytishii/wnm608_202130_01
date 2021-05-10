@@ -1,4 +1,4 @@
-<base href="http://corytishii.com/aau/wnm608/ishii.cory/wnm608/m10/">
+<base href="http://corytishii.com/aau/wnm608/ishii.cory/wnm608/m12/">
 
 
 <meta name="viewport" content="width=device-width">

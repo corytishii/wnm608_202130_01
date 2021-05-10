@@ -149,7 +149,7 @@ a {
 
 .card-basic,
 .card {
-    padding: 1em;
+    padding: 5em;
     overflow: hidden;
     position: relative;
 }
@@ -187,7 +187,7 @@ a {
         text-align: center;
     }
     .card-flat {
-        padding: 0;
+        padding: 5;
     }
 
 
