@@ -57,6 +57,11 @@ $pageoffset = isset($_GET['page'])?$_GET['page']:0;
         </div>
    </div>
 
+   <div class="grid gap productlist"></div>
+
+    <div><a href="admin">Product Admin</a></div>
+  </div>
+
 </body>
 </html>
 
