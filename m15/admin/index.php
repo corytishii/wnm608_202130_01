@@ -114,53 +114,90 @@ function makeProductForm($o) {
 	$id = $_GET['id'];
 	$addoredit = $id=='new' ? 'Add': 'Edit';
 	$createorupdate = $id=='new' ? 'create' : 'update';
+    $deletebutton = $id=='new' ? "" : "<li class='flex-none'><a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a></li>";
+
+$images = array_reduce(explode(",",$o->images),function($r,$o){
+    return $r."<img src='images/$o'>";
+});
+
+$data_show = $id=='new' ? "" : <<<HTML
+<div class="card soft">
+<div class="product-main">
+    <img src="images/$o->main_image" alt="">
+</div>
+<div class="product-thumbs">$images</div>
+<h2>$o->title</h2>
+<div>
+    <strong>Price</strong>
+    <span>&dollar;$o->price</span>
+</div>
+<div>
+    <strong>Category</strong>
+    <span>$o->category</span>
+</div>
+<div>
+    <strong>Quantity</strong>
+    <span>$o->quantity</span>
+</div>
+<div>
+    <strong>Description</strong>
+    <div>$o->description</div>
+</div>
+</div>
+HTML;
+
 
 echo <<<HTML
-<div class="display-flex">
-	<div class="flex-stretch">
-		<a href="admin/">Back</a>
-	</div>
-	<div class="flex-none">
-		[<a href="admin/?id=$id?action=delete">Delete</a>]
-	</div>
+<div class="card soft">
+    <nav class="nav-pills">
+        <ul>
+            <li class="flex-none"><a href="{$_SERVER['PHP_SELF']}">Back</a></li>
+            <li class="flex-stretch"></li>
+            $deletebutton
+        </ul>
+    </nav>
 </div>
-<form class="form-basic" method="post" action="admin/?id=$id&action=$createorupdate">
-	<h2>addoredit Product</h2>
-	<div class="form-control">
-		<label class="form-label" for="title">Title</label>
-		<input class="form-input" id="title" name="title" type="text" value="$o->title"></input>
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="price">Price</label>
-		<input class="form-input" id="price" name="price" type="number" min="1" max="1000" step="0.01" value="$o->price">
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="category">Category</label>
-		<input class="form-input" id="category" name="Category" type="text" value="$o->category"></input>
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="description">Description</label>
-		<textarea class="form-input" id="description" name="description">$o->description</textarea>
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="main_image">Main Image</label>
-		<input class="form-input" id="main_image" name="main_image" type="text" value="$o->main_image">
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="images">Other Images</label>
-		<input class="form-input" id="images" name="images" type="text" value="$o->images">
-	</div>
-	<div class="form-control">
-		<label class="form-label" for="quantity">Quantity</label>
-		<input class="form-input" id="quantity" name="quantity" type="text" value="$o->quantity">
-	</div>
-	<div class="form-control">
-		<input class="form-button" type="submit" value="Submit">
-	</div>
-</form>
+<div class="grid gap">
+    <div class="col-xs-12 col-md-5">$data_show</div>
+    <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate" class="col-xs-12 col-md-7">
+        <div class="card soft">
+        <h2>$addoredit Product</h2>
+        <div class="form-control">
+            <label for="product-title" class="form-label">Title</label>
+            <input type="text" class="form-input" placeholder="A Product Title" id="product-title" name="product-title" value="$o->title">
+        </div>
+        <div class="form-control">
+            <label for="product-price" class="form-label">Price</label>
+            <input type="number" class="form-input" placeholder="A Product Price" id="product-price" name="product-price" value="$o->price" step="0.01" min="0.01" max="1000">
+        </div>
+        <div class="form-control">
+            <label for="product-category" class="form-label">Category</label>
+            <input type="text" class="form-input" placeholder="A Product Category" id="product-category" name="product-category" value="$o->category">
+        </div>
+        <div class="form-control">
+            <label for="product-description" class="form-label">Description</label>
+            <textarea class="form-input" placeholder="A Product Description" id="product-description" name="product-description">$o->description</textarea>
+        </div>
+        <div class="form-control">
+            <label for="product-main-image" class="form-label">Main Image</label>
+            <input type="text" class="form-input" placeholder="A Product Main Image" id="product-main-image" name="product-main-image" value="$o->main_image">
+        </div>
+        <div class="form-control">
+            <label for="product-images" class="form-label">Images</label>
+            <input type="text" class="form-input" placeholder="A Product Images" id="product-images" name="product-images" value="$o->images">
+        </div>
+        <div class="form-control">
+            <label for="product-quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-input" placeholder="A Product Quantity" id="product-quantity" name="product-quantity" value="$o->quantity">
+        </div>
+        <div class="form-control">
+            <input type="submit" value="Submit" class="form-button">
+        </div>
+        </div>
+    </form>
+</div>
 HTML;
 }
-
 
 /* Layout*/
 ?>
