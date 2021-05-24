@@ -1,6 +1,6 @@
-<?
-include_once "../lib/php/functions.php";
+<?php 
 
+include_once "../lib/php/functions.php";
 
 $empty_product = (object)[
 	"title" => "",
@@ -11,10 +11,6 @@ $empty_product = (object)[
 	"images" => "",
 	"quantity" => 0
 ];
-
-
-
-/* logical actions */
 
 $conn = makePDOConn();
 try {
@@ -81,7 +77,7 @@ try {
 
 		case "delete":
 
-		$statement = $conn->prepare("DELETE FROM `prodicts` WHERE `id`=?");
+		$statement = $conn->prepare("DELETE FROM `products` WHERE `id`=?");
 		$statement->execute([$_GET['id']]);
 
 		header("location:{$_SERVER['PHP_SELF']}");
@@ -92,10 +88,6 @@ try {
 } catch(PDOException $e) {
 	die($e->getMessage());
 }
-
-
-
-/* templates */
 
 function makeListItemTemplate($carry,$item) {
 return $carry.<<<HTML
@@ -186,11 +178,11 @@ HTML;
 				<h1>Product Admin</h1>
 			</div>
 			<nav class="nav nav-flex flex-none">
-				<ul>
+				<ul class="display-flex">
 					<li>
-						<a href="index.php">Store</a>
-						<a href="admin/">List</a>
-						<a href="admin/?id=new">Add New Product</a>
+						<li><a href="index.php">Store</a></li>
+						<li><a href="admin/">List</a></li>
+						<li><a href="admin/?id=new">Add New Product</a></li>
 					</li>
 				</ul>
 			</nav>
