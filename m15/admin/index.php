@@ -155,7 +155,7 @@ echo <<<HTML
 		<input class="form-input" id="quantity" name="quantity" type="text" value="$o->quantity">
 	</div>
 	<div class="form-control">
-		<input class="form-button" type="submit" value="Confirm">
+		<input class="form-button" type="submit" value="Submit">
 	</div>
 </form>
 HTML;
