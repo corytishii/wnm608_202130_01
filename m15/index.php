@@ -24,7 +24,7 @@
                 <div class="col-xs-12 col-md-6 center-child">
                     <div style="max-width:75%">
                         <h2>The Ear Audio Store</h2>
-                        <p>Looking for some replacement earbuds? <span> The Ear Audio Store is the destination to be. </span> Check out the wide selection of ear audio products. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus libero et, earum temporibus reiciendis quas.</p>
+                        <p>Looking for some replacement earbuds? <span> The Ear Audio Store is the destination to be. </span> Check out the wide selection of ear audio products.
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">

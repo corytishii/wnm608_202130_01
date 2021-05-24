@@ -122,10 +122,10 @@ $images = array_reduce(explode(",",$o->images),function($r,$o){
 
 $data_show = $id=='new' ? "" : <<<HTML
 <div class="card soft">
-<div class="product-main">
+<div class="image-main">
     <img src="images/$o->main_image" alt="">
 </div>
-<div class="product-thumbs">$images</div>
+<div class="image-main">$images</div>
 <h2>$o->title</h2>
 <div>
     <strong>Price</strong>
